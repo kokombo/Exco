@@ -6,6 +6,9 @@ import GamesHeader from "./GamesHeader";
 import EventCard from "./EventCard";
 import TransactionHeader from "./TransactionHeader";
 import TransactionCard from "./TransactionCard";
+import ExploreCard from "./ExploreCard";
+import Amount from "./Amount";
+import ExploreHeader from "./ExploreHeader";
 
 export {
   OnboardingText,
@@ -16,4 +19,7 @@ export {
   EventCard,
   TransactionHeader,
   TransactionCard,
+  ExploreCard,
+  Amount,
+  ExploreHeader,
 };

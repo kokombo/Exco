@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View, Image } from "react-native";
 import { EventsType } from "../types/types";
 import { COLORS, GAP, PADDING, RADIUS, SIZE, asset } from "../../constants";
+import Amount from "./Amount";
 
 const EventCard = ({ item }: { item: EventsType }) => {
   return (
@@ -12,15 +13,7 @@ const EventCard = ({ item }: { item: EventsType }) => {
 
         <Text style={styles.name}>{item.name} </Text>
 
-        <View style={styles.point_wrapper}>
-          <Image
-            source={asset.solana}
-            style={styles.icon}
-            resizeMode="contain"
-          />
-
-          <Text style={styles.genre}>{item.point} </Text>
-        </View>
+        <Amount amount={item.point} />
 
         <Text style={styles.play}>Play to earn</Text>
       </View>

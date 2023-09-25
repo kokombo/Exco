@@ -19,7 +19,7 @@ const Events = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}
@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
     fontSize: SIZE.xxl,
     fontWeight: "bold",
     color: COLORS.accent,
+  },
+  container: {
+    flex: 1,
   },
 });
 

@@ -34,7 +34,9 @@ export type ExploreType = {
   name: string;
   genre: string;
   amount: number;
-  duration: number;
+  daysDuration: number;
+  hoursDuration: number;
+  minutesDuration: number;
   link: string;
 };
 
@@ -49,5 +51,5 @@ export type DurationType = {
   hourDuration: number;
   minuteDuration: number;
   secondsDuration: number;
-  daysDuration: number;
+  dayDuration: number;
 };

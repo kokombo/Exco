@@ -1,28 +1,36 @@
-import { StyleSheet, Text, SafeAreaView } from "react-native";
-import { useTimer } from "../../utilities/timer";
-import { DurationType } from "../../types/types";
-import { useEffect } from "react";
+import { StyleSheet, SafeAreaView, FlatList } from "react-native";
+import { explore } from "../../../constants/data";
+import { ExploreType } from "../../types/types";
+import { useState } from "react";
+import { ListRenderItem } from "react-native";
+import { ExploreCard, ExploreHeader } from "../../components";
+import { PADDING, GAP } from "../../../constants";
 
 const Explore = () => {
-  const { hours, seconds, minutes, getRemainingTime } = useTimer({
-    daysDuration: 1,
-    hourDuration: 10,
-    minuteDuration: 30,
-    secondsDuration: 30,
-  });
+  const [data, setData] = useState<ExploreType[]>(explore);
 
-  console.log(hours, minutes, seconds);
+  const renderItem: ListRenderItem<ExploreType> = ({ item }) => {
+    return <ExploreCard item={item} />;
+  };
 
   return (
-    <SafeAreaView>
-      <Text>Explore</Text>
-      <Text>{hours} </Text>
-      <Text>{minutes} </Text>
-      <Text>{seconds} </Text>
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ gap: GAP.small, padding: PADDING.normal }}
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={ExploreHeader}
+      />
     </SafeAreaView>
   );
 };
 
 export default Explore;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

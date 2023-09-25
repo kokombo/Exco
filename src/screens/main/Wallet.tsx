@@ -18,7 +18,7 @@ const Wallet = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
         renderItem={renderItem}
@@ -33,4 +33,8 @@ const Wallet = () => {
 
 export default Wallet;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

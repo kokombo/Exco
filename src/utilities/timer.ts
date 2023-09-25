@@ -1,14 +1,9 @@
+import { Alert } from "react-native";
 import { DurationType } from "../types/types";
-import { useEffect } from "react";
-
-interface CountdownType {
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
+import { useEffect, useState } from "react";
 
 export const useTimer = ({
-  daysDuration,
+  dayDuration,
   hourDuration,
   minuteDuration,
   secondsDuration,
@@ -17,17 +12,15 @@ export const useTimer = ({
   let tempYear = tempDate.getFullYear();
   let tempMonth = tempDate.getMonth();
   let tempDay = tempDate.getDate();
-  console.log(tempDay);
 
   const deadlineDate = new Date(
     tempYear,
     tempMonth,
-    tempDay + daysDuration,
+    tempDay + dayDuration,
     hourDuration,
     minuteDuration,
     secondsDuration
   );
-  console.log(deadlineDate);
 
   const deadlineTime = deadlineDate.getTime();
 
@@ -37,10 +30,27 @@ export const useTimer = ({
   let days;
   let countdown;
 
-  const getRemainingTime = () => {
-    const today = new Date().getTime();
-    const duration = deadlineTime - today;
+  const format = ({ prop }: { prop: number }) => {
+    if (prop < 10 && prop !== 0) {
+      return `0${prop}`;
+    } else {
+      return prop;
+    }
+  };
 
+  const today = new Date().getTime();
+
+  const [duration, setDuration] = useState<number>(deadlineTime - today);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDuration(deadlineTime - today);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [deadlineDate]);
+
+  const getRemainingTime = (duration: number) => {
     const oneDay = 24 * 60 * 60 * 1000;
     const oneHour = 60 * 60 * 1000;
     const oneMinute = 60 * 1000;
@@ -52,20 +62,12 @@ export const useTimer = ({
     minutes = Math.floor((duration % oneHour) / oneMinute);
     seconds = Math.floor((duration % oneMinute) / 1000);
 
-    const format = ({ prop }: any) => {
-      if (prop < 10) {
-        return `0${prop}`;
-      } else {
-        return prop;
-      }
-    };
-
-    format({ hours });
-    format({ minutes });
-    format({ seconds });
+    hours = format({ prop: hours });
+    minutes = format({ prop: minutes });
+    seconds = format({ prop: seconds });
   };
 
-  getRemainingTime();
+  getRemainingTime(duration);
 
-  return { hours, minutes, seconds, getRemainingTime };
+  return { days, hours, minutes, seconds };
 };
