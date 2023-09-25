@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     color: COLORS.accent,
     fontSize: SIZE.xxl,
     fontWeight: "bold",
-    maxWidth: 200,
+    // maxWidth: 200,
   },
   button_wrapper: {
     flexDirection: "row",

@@ -23,7 +23,11 @@ const Wallet = () => {
         data={data}
         renderItem={renderItem}
         keyExtractor={(item: TransactionsType) => item.id}
-        contentContainerStyle={{ gap: GAP.large, padding: PADDING.normal }}
+        contentContainerStyle={{
+          gap: GAP.large,
+          paddingHorizontal: PADDING.normal,
+          paddingVertical: PADDING.large,
+        }}
         ListHeaderComponent={TransactionHeader}
         showsVerticalScrollIndicator={false}
       />

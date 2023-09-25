@@ -10,8 +10,17 @@ import { ExploreType } from "../types/types";
 import { COLORS, GAP, RADIUS } from "../../constants";
 import TimeLeft from "./TimeLeft";
 import Amount from "./Amount";
+import { useTimer } from "../utilities/timer";
+import { TimeProp } from "../types/types";
 
 const ExploreCard = ({ item }: { item: ExploreType }) => {
+  const { days, hours, seconds, minutes }: TimeProp = useTimer({
+    dayDuration: item.daysDuration,
+    hourDuration: item.hoursDuration,
+    minuteDuration: item.minutesDuration,
+    secondsDuration: 0,
+  });
+
   return (
     <ImageBackground
       source={item.image}
@@ -27,9 +36,10 @@ const ExploreCard = ({ item }: { item: ExploreType }) => {
         </View>
         <View style={styles.duration_wrapper}>
           <TimeLeft
-            hoursDuration={item.hoursDuration}
-            minutesDuration={item.minutesDuration}
-            daysDuration={item.daysDuration}
+            days={days}
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
           />
           <Pressable style={styles.play_button}>
             <Text>Play</Text>

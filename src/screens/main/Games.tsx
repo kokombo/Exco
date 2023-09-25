@@ -31,7 +31,8 @@ const Games = () => {
         keyExtractor={(item: GamesType) => item.id}
         contentContainerStyle={{
           gap: GAP.small,
-          padding: PADDING.normal,
+          paddingHorizontal: PADDING.normal,
+          paddingVertical: PADDING.large,
         }}
         columnWrapperStyle={{
           justifyContent: "space-between",

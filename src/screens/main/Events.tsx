@@ -24,7 +24,11 @@ const Events = () => {
         data={data}
         renderItem={renderItem}
         keyExtractor={(item: EventsType) => item.id}
-        contentContainerStyle={{ gap: GAP.small, padding: PADDING.normal }}
+        contentContainerStyle={{
+          gap: GAP.small,
+          paddingHorizontal: PADDING.normal,
+          paddingVertical: PADDING.large,
+        }}
         ListHeaderComponentStyle={{ marginBottom: 24 }}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={

@@ -23,6 +23,7 @@ export const SIZE = {
 export const PADDING = {
   normal: 15,
   small: 8,
+  large: 24,
 };
 
 export const RADIUS = {

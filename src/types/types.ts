@@ -53,3 +53,10 @@ export type DurationType = {
   secondsDuration: number;
   dayDuration: number;
 };
+
+export interface TimeProp {
+  minutes?: number;
+  hours?: number;
+  days?: number;
+  seconds?: number;
+}

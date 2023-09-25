@@ -1,22 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import { COLORS, GAP } from "../../constants";
-import { useTimer } from "../utilities/timer";
-import { ExploreType } from "../types/types";
+import { TimeProp } from "../types/types";
 
-interface Prop {
-  minutesDuration: number;
-  hoursDuration: number;
-  daysDuration: number;
-}
-
-const TimeLeft = ({ minutesDuration, hoursDuration, daysDuration }: Prop) => {
-  const { days, hours, seconds, minutes } = useTimer({
-    dayDuration: daysDuration,
-    hourDuration: hoursDuration,
-    minuteDuration: minutesDuration,
-    secondsDuration: 0,
-  });
-
+const TimeLeft = ({ days, hours, seconds, minutes }: TimeProp) => {
   return (
     <View style={styles.wrapper}>
       <Text style={styles.text}>Time left</Text>

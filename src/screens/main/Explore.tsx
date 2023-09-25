@@ -19,7 +19,11 @@ const Explore = () => {
         data={data}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={{ gap: GAP.small, padding: PADDING.normal }}
+        contentContainerStyle={{
+          gap: GAP.small,
+          paddingHorizontal: PADDING.normal,
+          paddingVertical: PADDING.large,
+        }}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={ExploreHeader}
       />

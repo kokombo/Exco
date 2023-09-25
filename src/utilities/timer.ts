@@ -1,4 +1,3 @@
-import { Alert } from "react-native";
 import { DurationType } from "../types/types";
 import { useEffect, useState } from "react";
 
@@ -28,7 +27,6 @@ export const useTimer = ({
   let minutes;
   let seconds;
   let days;
-  let countdown;
 
   const format = ({ prop }: { prop: number }) => {
     if (prop < 10 && prop !== 0) {
