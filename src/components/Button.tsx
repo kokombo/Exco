@@ -21,6 +21,17 @@ export const BlackButton = ({ onPress, cta }: Onboarding) => {
   );
 };
 
+export const PlainlessButton = ({ onPress, cta }: Onboarding) => {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={[styles.button, styles.plainless_button]}
+    >
+      <Text style={[styles.text, styles.white_text]}>{cta} </Text>
+    </Pressable>
+  );
+};
+
 const styles = StyleSheet.create({
   button: {
     paddingHorizontal: 32,
@@ -55,5 +66,9 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
+  },
+  plainless_button: {
+    borderWidth: 1,
+    borderColor: COLORS.secondary,
   },
 });
