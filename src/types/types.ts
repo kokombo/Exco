@@ -60,3 +60,8 @@ export interface TimeProp {
   days?: number;
   seconds?: number;
 }
+
+export interface MoreType {
+  heading: string;
+  subheading: string;
+}

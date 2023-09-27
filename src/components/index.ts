@@ -9,6 +9,8 @@ import TransactionCard from "./TransactionCard";
 import ExploreCard from "./ExploreCard";
 import Amount from "./Amount";
 import ExploreHeader from "./ExploreHeader";
+import UserProfile from "./UserProfile";
+import MoreCard from "./MoreCard";
 
 export {
   OnboardingText,
@@ -22,4 +24,6 @@ export {
   ExploreCard,
   Amount,
   ExploreHeader,
+  UserProfile,
+  MoreCard,
 };

@@ -6,7 +6,7 @@ import { COLORS, GAP, RADIUS, SIZE } from "../../constants";
 const IndividualEarner = ({ item }: { item: EarnersType }) => {
   return (
     <View style={styles.wrapper}>
-      <Image source={item.image} style={styles.image} />
+      <Image source={item.image} resizeMode="contain" style={styles.image} />
       <View style={styles.info}>
         <Text style={styles.name}>{item.name} </Text>
         <Amount amount={item.amount} />

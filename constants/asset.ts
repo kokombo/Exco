@@ -20,6 +20,7 @@ import supermario from "../assets/images/supermario.png";
 import synced from "../assets/images/synced.png";
 import warframe from "../assets/images/warframe.png";
 import warhospital from "../assets/images/warhospital.png";
+import alan from "../assets/images/alan.png";
 
 //Icons
 
@@ -67,6 +68,7 @@ export default {
   synced,
   warframe,
   warhospital,
+  alan,
 
   //Icons
   activeEvents,

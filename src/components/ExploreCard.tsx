@@ -4,7 +4,6 @@ import {
   View,
   ImageBackground,
   Pressable,
-  Image,
 } from "react-native";
 import { ExploreType } from "../types/types";
 import { COLORS, GAP, RADIUS } from "../../constants";
@@ -12,6 +11,7 @@ import TimeLeft from "./TimeLeft";
 import Amount from "./Amount";
 import { useTimer } from "../utilities/timer";
 import { TimeProp } from "../types/types";
+import { useEffect } from "react";
 
 const ExploreCard = ({ item }: { item: ExploreType }) => {
   const { days, hours, seconds, minutes }: TimeProp = useTimer({

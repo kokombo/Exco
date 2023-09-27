@@ -67,5 +67,5 @@ export const useTimer = ({
 
   getRemainingTime(duration);
 
-  return { days, hours, minutes, seconds };
+  return { days, hours, minutes, seconds, getRemainingTime };
 };
