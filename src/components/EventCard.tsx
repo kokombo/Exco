@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View, Image } from "react-native";
 import { EventsType } from "../types/types";
-import { COLORS, GAP, PADDING, RADIUS, SIZE, asset } from "../../constants";
+import { COLORS, GAP, PADDING, RADIUS, SIZE } from "../../constants";
 import Amount from "./Amount";
 
 const EventCard = ({ item }: { item: EventsType }) => {

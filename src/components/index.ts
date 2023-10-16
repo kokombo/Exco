@@ -11,6 +11,7 @@ import Amount from "./Amount";
 import ExploreHeader from "./ExploreHeader";
 import UserProfile from "./UserProfile";
 import MoreCard from "./MoreCard";
+import TabImage from "./TabImage";
 
 export {
   OnboardingText,
@@ -26,4 +27,5 @@ export {
   ExploreHeader,
   UserProfile,
   MoreCard,
+  TabImage,
 };

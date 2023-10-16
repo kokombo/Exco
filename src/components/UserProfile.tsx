@@ -23,8 +23,6 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
-
 const styles = StyleSheet.create({
   image: {
     width: 56,
@@ -60,3 +58,5 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
 });
+
+export default UserProfile;

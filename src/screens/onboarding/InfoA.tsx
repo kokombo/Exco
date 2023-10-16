@@ -1,4 +1,4 @@
-import { View, StyleSheet, StatusBar } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { asset, COLORS, GAP, PADDING } from "../../../constants";
 import { OnboardingText, Dot, OnboardingImage } from "../../components";
 

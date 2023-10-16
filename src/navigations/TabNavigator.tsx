@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Explore, Games, Events, Wallet, More } from "../screens/main";
-import { Image } from "react-native";
-import { asset, RADIUS, COLORS, SIZE } from "../../constants";
+import { asset, COLORS, SIZE } from "../../constants";
+import { TabImage } from "../components";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,42 +26,32 @@ const TabNavigator = () => {
         tabBarIcon: ({ focused }) => {
           if (route.name === "explore") {
             return (
-              <Image
+              <TabImage
                 source={focused ? asset.activeExplore : asset.inactiveExplore}
-                style={{ height: 30, width: 30 }}
-                resizeMode="contain"
               />
             );
           } else if (route.name === "games") {
             return (
-              <Image
+              <TabImage
                 source={focused ? asset.activeGames : asset.inactiveGames}
-                style={{ height: 30, width: 30 }}
-                resizeMode="contain"
               />
             );
           } else if (route.name === "events") {
             return (
-              <Image
+              <TabImage
                 source={focused ? asset.activeEvents : asset.inactiveEvents}
-                style={{ height: 30, width: 30 }}
-                resizeMode="contain"
               />
             );
           } else if (route.name === "wallet") {
             return (
-              <Image
+              <TabImage
                 source={focused ? asset.activeWallet : asset.inactiveWallet}
-                style={{ height: 30, width: 30 }}
-                resizeMode="contain"
               />
             );
           } else {
             return (
-              <Image
+              <TabImage
                 source={focused ? asset.activeMore : asset.inactiveMore}
-                style={{ height: 30, width: 30 }}
-                resizeMode="contain"
               />
             );
           }

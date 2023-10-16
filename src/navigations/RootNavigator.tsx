@@ -2,7 +2,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Animated } from "react-native";
 import { InfoA, InfoB, InfoC, SignIn, Splash } from "../screens/onboarding";
 import TabNavigator from "./TabNavigator";
-import { COLORS } from "../../constants";
 
 const Stack = createStackNavigator();
 
