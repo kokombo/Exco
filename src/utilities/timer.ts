@@ -1,4 +1,4 @@
-import { DurationType } from "../types/types";
+import type { DurationType } from "../types/types";
 import { useEffect, useState } from "react";
 
 export const useTimer = ({
@@ -7,10 +7,10 @@ export const useTimer = ({
   minuteDuration,
   secondsDuration,
 }: DurationType) => {
-  let tempDate = new Date();
-  let tempYear = tempDate.getFullYear();
-  let tempMonth = tempDate.getMonth();
-  let tempDay = tempDate.getDate();
+  const tempDate = new Date();
+  const tempYear = tempDate.getFullYear();
+  const tempMonth = tempDate.getMonth();
+  const tempDay = tempDate.getDate();
 
   const deadlineDate = new Date(
     tempYear,
@@ -23,17 +23,17 @@ export const useTimer = ({
 
   const deadlineTime = deadlineDate.getTime();
 
-  let hours;
-  let minutes;
-  let seconds;
-  let days;
+  let hours: string | number = 0;
+  let minutes: string | number = 0;
+  let seconds: string | number = 0;
+  let days = 0;
 
   const format = ({ prop }: { prop: number }) => {
     if (prop < 10 && prop !== 0) {
       return `0${prop}`;
-    } else {
-      return prop;
     }
+
+    return prop;
   };
 
   const today = new Date().getTime();
@@ -46,7 +46,7 @@ export const useTimer = ({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [deadlineDate]);
+  }, [deadlineTime, today]);
 
   const getRemainingTime = (duration: number) => {
     const oneDay = 24 * 60 * 60 * 1000;

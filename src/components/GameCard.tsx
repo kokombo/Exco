@@ -1,5 +1,5 @@
 import { StyleSheet, Image, Pressable } from "react-native";
-import { GamesType } from "../types/types";
+import type { GamesType } from "../types/types";
 import { RADIUS } from "../../constants";
 
 const GameCard = ({ item }: { item: GamesType }) => {

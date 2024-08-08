@@ -3,8 +3,13 @@ import { YellowButton, BlackButton } from "../../components/Button";
 import { GAP, COLORS, PADDING } from "../../../constants";
 import ConnectWallet from "./ConnectWallet";
 import { useState } from "react";
+import type { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-const SignIn = ({ navigation }: any) => {
+const SignIn = ({
+  navigation,
+}: {
+  navigation: NavigationProp<ParamListBase>;
+}) => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
 
   const connectWallet = () => {

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import { EarnersType } from "../types/types";
+import type { EarnersType } from "../types/types";
 import Amount from "./Amount";
 import { COLORS, GAP, RADIUS, SIZE } from "../../constants";
 

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { COLORS, GAP } from "../../constants";
-import { TimeProp } from "../types/types";
+import type { TimeProp } from "../types/types";
 
 const TimeLeft = ({ days, hours, seconds, minutes }: TimeProp) => {
   return (

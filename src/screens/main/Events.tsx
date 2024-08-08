@@ -3,12 +3,12 @@ import {
   StyleSheet,
   Text,
   SafeAreaView,
-  ListRenderItem,
+  type ListRenderItem,
 } from "react-native";
 import { EventCard } from "../../components";
 import { useState } from "react";
 import { event } from "../../../constants/data";
-import { EventsType } from "../../types/types";
+import type { EventsType } from "../../types/types";
 import { COLORS, GAP, PADDING, SIZE } from "../../../constants";
 
 const Events = () => {

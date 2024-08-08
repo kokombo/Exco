@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from "react-native";
-import { Onboarding } from "../types/types";
+import type { Onboarding } from "../types/types";
 import { COLORS, GAP, SIZE } from "../../constants";
 import { YellowButton } from "./Button";
 

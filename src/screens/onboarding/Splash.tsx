@@ -1,11 +1,18 @@
 import { Text, View, StyleSheet, Image } from "react-native";
 import { COLORS, SIZE, asset, GAP } from "../../../constants";
 import { useEffect } from "react";
+import type { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-const Splash = ({ navigation }: any) => {
+const Splash = ({
+  navigation,
+}: {
+  navigation: NavigationProp<ParamListBase>;
+}) => {
   useEffect(() => {
-    setTimeout(() => navigation.replace("infoA"), 4000);
-  }, []);
+    const timer = setTimeout(() => navigation.navigate("infoA"), 4000);
+
+    return () => clearTimeout(timer);
+  }, [navigation.navigate]);
 
   return (
     <View style={styles.container}>

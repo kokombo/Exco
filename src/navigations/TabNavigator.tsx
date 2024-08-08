@@ -30,31 +30,37 @@ const TabNavigator = () => {
                 source={focused ? asset.activeExplore : asset.inactiveExplore}
               />
             );
-          } else if (route.name === "games") {
+          }
+
+          if (route.name === "games") {
             return (
               <TabImage
                 source={focused ? asset.activeGames : asset.inactiveGames}
               />
             );
-          } else if (route.name === "events") {
+          }
+
+          if (route.name === "events") {
             return (
               <TabImage
                 source={focused ? asset.activeEvents : asset.inactiveEvents}
               />
             );
-          } else if (route.name === "wallet") {
+          }
+
+          if (route.name === "wallet") {
             return (
               <TabImage
                 source={focused ? asset.activeWallet : asset.inactiveWallet}
               />
             );
-          } else {
-            return (
-              <TabImage
-                source={focused ? asset.activeMore : asset.inactiveMore}
-              />
-            );
           }
+
+          return (
+            <TabImage
+              source={focused ? asset.activeMore : asset.inactiveMore}
+            />
+          );
         },
       })}
     >

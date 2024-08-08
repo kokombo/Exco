@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View, Image } from "react-native";
 import { COLORS, GAP, RADIUS, SIZE, asset } from "../../constants";
-import { Onboarding } from "../types/types";
+import type { Onboarding } from "../types/types";
 
 export const YellowButton = ({ onPress, cta }: Onboarding) => {
   return (

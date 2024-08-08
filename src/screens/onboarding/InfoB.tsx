@@ -1,8 +1,13 @@
 import { View, StyleSheet } from "react-native";
 import { asset, COLORS, PADDING, GAP } from "../../../constants";
 import { OnboardingText, Dot, OnboardingImage } from "../../components";
+import type { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-const InfoB = ({ navigation }: any) => {
+const InfoB = ({
+  navigation,
+}: {
+  navigation: NavigationProp<ParamListBase>;
+}) => {
   const onPress = () => {
     navigation.navigate("infoC");
   };

@@ -1,5 +1,5 @@
 import asset from "./asset";
-import {
+import type {
   EarnersType,
   GamesType,
   EventsType,

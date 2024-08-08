@@ -1,5 +1,5 @@
 import { Image } from "react-native";
-import { ImageSourcePropType } from "react-native";
+import type { ImageSourcePropType } from "react-native";
 
 type Prop = {
   source: ImageSourcePropType;

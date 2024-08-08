@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType, StyleSheet } from "react-native";
+import { Image, type ImageSourcePropType, StyleSheet } from "react-native";
 import { RADIUS } from "../../constants";
 
 type ImageProp = {

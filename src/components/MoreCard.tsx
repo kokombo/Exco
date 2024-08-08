@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 import { COLORS, GAP, SIZE, asset } from "../../constants";
-import { MoreType } from "../types/types";
+import type { MoreType } from "../types/types";
 
 const MoreCard = ({ heading, subheading }: MoreType) => {
   return (

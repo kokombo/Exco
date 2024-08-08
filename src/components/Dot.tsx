@@ -1,5 +1,5 @@
 import { View, Image, StyleSheet } from "react-native";
-import { ImageSourcePropType } from "react-native";
+import type { ImageSourcePropType } from "react-native";
 import { GAP, RADIUS } from "../../constants";
 
 type DotType = {

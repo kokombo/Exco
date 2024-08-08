@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View, Image } from "react-native";
-import { EventsType } from "../types/types";
+import type { EventsType } from "../types/types";
 import { COLORS, GAP, PADDING, RADIUS, SIZE } from "../../constants";
 import Amount from "./Amount";
 

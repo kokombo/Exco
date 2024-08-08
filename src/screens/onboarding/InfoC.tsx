@@ -1,8 +1,13 @@
 import { View, StyleSheet } from "react-native";
 import { asset, COLORS, PADDING, GAP, RADIUS } from "../../../constants";
 import { OnboardingText, Dot, OnboardingImage } from "../../components";
+import type { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-const InfoC = ({ navigation }: any) => {
+const InfoC = ({
+  navigation,
+}: {
+  navigation: NavigationProp<ParamListBase>;
+}) => {
   const onPress = () => {
     navigation.navigate("signin");
   };

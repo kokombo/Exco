@@ -1,11 +1,11 @@
 import {
   StyleSheet,
   FlatList,
-  ListRenderItem,
+  type ListRenderItem,
   SafeAreaView,
 } from "react-native";
 import { games } from "../../../constants/data";
-import { GamesType } from "../../types/types";
+import type { GamesType } from "../../types/types";
 import { useState } from "react";
 import { GameCard, GamesHeader } from "../../components";
 import { GAP, PADDING } from "../../../constants";

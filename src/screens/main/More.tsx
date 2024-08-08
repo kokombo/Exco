@@ -25,7 +25,7 @@ const More = () => {
           />
         </View>
 
-        <View style={styles.line}></View>
+        <View style={styles.line} />
 
         <View style={styles.container}>
           <MoreCard

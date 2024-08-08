@@ -31,7 +31,7 @@ const TransactionHeader = () => {
           </Pressable>
         </View>
       </View>
-      <View style={styles.line}></View>
+      <View style={styles.line} />
     </View>
   );
 };

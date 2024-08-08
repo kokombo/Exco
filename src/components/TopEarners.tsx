@@ -1,6 +1,12 @@
-import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  type ListRenderItem,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
-import { EarnersType } from "../types/types";
+import type { EarnersType } from "../types/types";
 import { earners } from "../../constants/data";
 import { useState } from "react";
 import IndividualEarner from "./IndividualEarner";

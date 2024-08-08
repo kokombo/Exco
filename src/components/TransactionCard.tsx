@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import { TransactionsType } from "../types/types";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  type ImageSourcePropType,
+} from "react-native";
+import type { TransactionsType } from "../types/types";
 import { COLORS, GAP, RADIUS, SIZE, asset } from "../../constants";
 
 const TransactionCard = ({ item }: { item: TransactionsType }) => {
-  let sign;
-  let icon;
+  let sign = "";
+  let icon: ImageSourcePropType;
 
   if (item?.type.toLowerCase() === "receive") {
     icon = asset.receive;

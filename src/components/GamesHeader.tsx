@@ -16,7 +16,7 @@ const GamesHeader = ({ genreList }: { genreList: string[] }) => {
 
       <View style={styles.button_wrapper}>
         {genreList.map((item, index) => {
-          return <RenderItem item={item} key={index} />;
+          return <RenderItem item={item} key={index.toString()} />;
         })}
       </View>
     </View>

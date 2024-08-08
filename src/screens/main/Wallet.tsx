@@ -2,11 +2,11 @@ import {
   StyleSheet,
   SafeAreaView,
   FlatList,
-  ListRenderItem,
+  type ListRenderItem,
 } from "react-native";
 import { useState } from "react";
 import { transactions } from "../../../constants/data";
-import { TransactionsType } from "../../types/types";
+import type { TransactionsType } from "../../types/types";
 import { TransactionCard, TransactionHeader } from "../../components";
 import { GAP, PADDING } from "../../../constants";
 

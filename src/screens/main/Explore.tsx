@@ -1,8 +1,8 @@
 import { StyleSheet, SafeAreaView, FlatList } from "react-native";
 import { explore } from "../../../constants/data";
-import { ExploreType } from "../../types/types";
+import type { ExploreType } from "../../types/types";
 import { useState } from "react";
-import { ListRenderItem } from "react-native";
+import type { ListRenderItem } from "react-native";
 import { ExploreCard, ExploreHeader } from "../../components";
 import { PADDING, GAP } from "../../../constants";
 
