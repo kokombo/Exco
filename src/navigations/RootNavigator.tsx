@@ -15,6 +15,7 @@ const RootNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
+        gestureEnabled: false,
       }}
       screenListeners={{
         focus: () => {

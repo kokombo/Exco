@@ -44,9 +44,9 @@ const ConnectWallet = ({ visible, onRequestClose }: Prop) => {
                     onPress={() => {
                       setSelected(true);
                     }}
-                  >
-                    <Text style={styles.text}>{item.wallet}</Text>
-                  </Pressable>
+                  />
+
+                  <Text style={styles.text}>{item.wallet}</Text>
                 </View>
               );
             })}
